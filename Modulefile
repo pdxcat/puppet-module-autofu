@@ -1,0 +1,10 @@
+name    'pdxcat-autofu'
+version '0.0.1'
+source 'https://github.com/pdxcat/puppet-module-autofu'
+author 'theCAT'
+license 'Apache License 2.0'
+summary 'Autofu Service Module for Puppet'
+description 'Autofu Service Module for Puppet'
+project_page 'https://github.com/pdxcat/puppet-module-autofu'
+
+dependency 'puppetlabs/stdlib', '>= 2.2.1'
