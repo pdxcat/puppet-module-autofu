@@ -1,6 +1,6 @@
 #/bin/sh
 # Check every X seconds (60 is a good default):
-INTERVAL=300
+INTERVAL=60
 CONFFILE='/etc/auto.fu'
 # The shares that need to be mounted:
 
