@@ -1,7 +1,7 @@
 define autofu::mount (
-  $mountpoint = $title,
   $location,
-  $options = undef
+  $mountpoint = $title,
+  $options    = undef
 ) {
   include autofu
 

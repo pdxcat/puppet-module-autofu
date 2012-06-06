@@ -1,8 +1,8 @@
 class autofu {
 
-  case $operatingsystem {
-    "Ubuntu": { } # yay!
-    default:  { fail("autofu does not support $operatingsystem") }
+  case $::operatingsystem {
+    'Ubuntu': { } # yay!
+    default:  { fail("autofu does not support $::operatingsystem") }
   }
 
   File {
@@ -13,7 +13,7 @@ class autofu {
   }
 
   file { '/etc/init/autofu.conf':
-    source => "puppet://$server/modules/autofu/autofu.conf",
+    source => "puppet://$::server/modules/autofu/autofu.conf",
     notify => [
       Exec['autofu initctl reload-configuration'],
       Service['autofu'],
@@ -25,12 +25,12 @@ class autofu {
   }
 
   file { '/etc/auto.fu':
-    mode   => '644',
+    mode   => '0644',
     notify => Service['autofu'],
   }
 
   file { '/usr/local/bin/autofu.sh':
-    source => "puppet://$server/modules/autofu/autofu.sh",
+    source => "puppet://$::server/modules/autofu/autofu.sh",
   }
 
   service { 'autofu':
