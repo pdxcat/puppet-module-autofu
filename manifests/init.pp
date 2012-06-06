@@ -21,7 +21,7 @@ class autofu {
   }
 
   file { '/etc/init.d/autofu':
-    source => "puppet://$server/modules/autofu/autofu.init",
+    content => "#!/bin/sh\n\nservice autofu \$1\n",
   }
 
   file { '/etc/auto.fu':
