@@ -11,9 +11,9 @@ Thanks to JeroenHoek on ubuntuforums.org for the idea and code example.
 http://ubuntuforums.org/showthread.php?t=1389291
 
 Example usage:
- autofu::mount { 'ftpserver':
-    mountpoint => '/ftp',
-    location   => 'ftpserver.cat.pdx.edu:/volumes/ftp',
-    options    => 'rw,hard,intr,nosuid',
-  }
 
+    autofu::mount { 'ftpserver':
+      mountpoint => '/ftp',
+      location   => 'ftpserver.cat.pdx.edu:/volumes/ftp',
+      options    => 'rw,hard,intr,nosuid',
+    }
