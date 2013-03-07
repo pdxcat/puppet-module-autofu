@@ -16,4 +16,4 @@ Example usage:
       mountpoint => '/ftp',
       location   => 'ftpserver.cat.pdx.edu:/volumes/ftp',
       options    => 'rw,hard,intr,nosuid',
-    }
+    } 
