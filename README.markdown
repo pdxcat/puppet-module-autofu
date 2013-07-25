@@ -12,8 +12,10 @@ http://ubuntuforums.org/showthread.php?t=1389291
 
 Example usage:
 
-    autofu::mount { 'ftpserver':
-      mountpoint => '/ftp',
-      location   => 'ftpserver.cat.pdx.edu:/volumes/ftp',
-      options    => 'rw,hard,intr,nosuid',
-    } 
+```puppet
+autofu::mount { 'ftpserver':
+ mountpoint => '/ftp',
+ location   => 'ftpserver.cat.pdx.edu:/volumes/ftp',
+ options    => 'rw,hard,intr,nosuid',
+}
+```
